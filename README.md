@@ -1,3 +1,3 @@
 # atmospheric-dynamics
 
-code and material I use in atmospheric dynamics courses
+code and material I've made for use in atmospheric dynamics courses
