@@ -3,7 +3,7 @@
 
 python code I've made for courses in atmospheric dynamics
 
-<b> gfs_geostrophic.py </b>
+<b> gfs_geostrophic_1.0.py </b>
 </br>
 This program gets real-time GFS data from the UCAR server and calculates and plots geostrophic winds.  Requires numpy, matplotlib, cartopy, and xarray.
 
