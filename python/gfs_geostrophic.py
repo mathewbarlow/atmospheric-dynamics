@@ -35,11 +35,13 @@ import xarray as xr
 
 # VALUES TO SET *************************************************
 # set date, lat-lon range, and level (in hPa)
-mydate = '20211205'
-myhour = '12'
+sample_datetime = datetime(2021, 12, 5, 12)
+# mydate = '20211205'
+# myhour = '12'
 (lon1, lon2) = (-140, -60)
 (lat1, lat2) = (15, 60)
-level = 500
+level = input("Enter pressure level in hPa (default is 500): ") or 500
+
 # ****************************************************************
 
 # convert lon to 0-360
@@ -56,9 +58,14 @@ omega = 7.292e-5
 
 
 # open dataset and retreive variables
-url = 'https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/' + \
-    'Global_0p25deg_ana/GFS_Global_0p25deg_ana_' + mydate + '_' + \
-    myhour + '00.grib2'
+# url = 'https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/' + \
+#     'Global_0p25deg_ana/GFS_Global_0p25deg_ana_' + mydate + '_' + \
+#     myhour + '00.grib2'
+
+url = (
+    "https://thredds.ucar.edu/thredds/dodsC/grib/NCEP/GFS/"
+    f"Global_0p25deg_ana/GFS_Global_0p25deg_ana_{sample_datetime:%Y%m%d_%H}00.grib2"
+)
 
 ds = xr.open_dataset(url)
 # to list all variables:  print(list(ds.variables))
@@ -181,8 +188,8 @@ vg = (g/f)*ddx(hgts)
 # now make some plots
 
 # get date for plotting
-fdate = datetime.strptime(mydate, '%Y%m%d').strftime('%d %b %Y')
-
+# fdate = datetime.strptime(mydate, '%Y%m%d').strftime('%d %b %Y')
+fdate = sample_datetime.strftime("%d %b %Y")
 plt.close("all")
 
 
