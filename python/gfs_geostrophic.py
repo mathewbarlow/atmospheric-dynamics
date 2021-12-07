@@ -188,8 +188,8 @@ vg = (g/f)*ddx(hgts)
 # now make some plots
 
 # get date for plotting
-fdate = datetime.strptime(mydate, '%Y%m%d').strftime('%d %b %Y')
-
+# fdate = datetime.strptime(mydate, '%Y%m%d').strftime('%d %b %Y')
+fdate = sample_datetime.strftime("%d %b %Y")
 plt.close("all")
 
 
