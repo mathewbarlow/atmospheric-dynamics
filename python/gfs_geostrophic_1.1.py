@@ -35,7 +35,7 @@ import xarray as xr
 
 # VALUES TO SET *************************************************
 # set date, lat-lon range, and level (in hPa)
-mydate = '20211205'
+mydate = '20211207'
 myhour = '12'
 (lon1, lon2) = (-140, -60)
 (lat1, lat2) = (15, 60)
