@@ -22,7 +22,6 @@ This program gets real-time GFS data from the UCAR server and calculates and plo
 This program gets real-time GFS data from the UCAR server and calculates and plots geostrophic and rotational winds.  Requires numpy, matplotlib, cartopy, xarray, windspharm. You can do all this with built-in functions through the MetPy package, but this is intended to be a more basic example.
 
 <p float="left">
-  <img src="figures/obs_winds_geostream.gif" width="400" />
   <img src="figures/geo_winds_geostream.gif" width="400" /> 
 </p>
 
